@@ -32,14 +32,9 @@ class Solution(object):
             if(lengthCenter2 > lengthCenter1 and lengthCenter2 > maxLength):
                 maxCenter = center
                 maxLength = lengthCenter2
-            print(center, lengthCenter1, lengthCenter2, s[center])
             center += 1
         
-        print(maxLength, maxCenter)
+
         if(maxLength%2 == 0):
             return s[maxCenter - int(maxLength-1)/2 : maxCenter + int(maxLength/2)+1]
         return s[maxCenter - int(maxLength/2) : maxCenter + int(maxLength/2)+1]
-        
-
-a = Solution()
-print(a.longestPalindrome("cbbd"))
